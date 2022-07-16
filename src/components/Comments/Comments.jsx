@@ -14,11 +14,11 @@ export default function Comments() {
     //handleNext
     const handleNext = (event) => {
         event.preventDefault();
-        history.push('/5');
-        // dispatch({
-        //     type: 'ADD_FEELING',
-        //     payload: { feeling },
-        // });
+        history.push('/review');
+        dispatch({
+            type: 'ADD_COMMENTS',
+            payload: { comment: comment },
+        });
     };
 
     //handleComments
@@ -33,12 +33,12 @@ export default function Comments() {
             <div className="comment-form">
                 <form>
                     <h1>Any comments you want to leave?</h1>
-                    <h1>{comment}</h1>
-                    <input
+                    <h4>(This is optional)</h4>
+                    <textarea
                         id="comment"
                         type="text"
                         onChange={handleComments}
-                    ></input>
+                    ></textarea>
                 </form>
                 <button onClick={handleNext}>
                     <DoneAllIcon className="nextButton" />

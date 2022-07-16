@@ -35,7 +35,7 @@ const support = (state = [], action) => {
             return state;
     }
 };
-const comments = (state = [], action) => {
+const comment = (state = [], action) => {
     switch (action.type) {
         case 'ADD_COMMENTS':
             return action.payload;
@@ -49,7 +49,7 @@ const store = createStore(
         feeling,
         understanding,
         support,
-        comments,
+        comment,
     }),
     applyMiddleware(logger)
 );

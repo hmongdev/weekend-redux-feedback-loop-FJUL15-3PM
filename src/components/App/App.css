@@ -32,5 +32,9 @@
     color: var(--background-color);
 }
 
-/* input {
-} */
+textarea {
+    font-family: 'Muli', sans-serif;
+    font-size: x-large;
+    width: 50%;
+    min-height: 5rem;
+}
