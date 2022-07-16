@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 
 //mui arrow
 import DoneAllIcon from '@mui/icons-material/DoneAll';
+import { useDispatch } from 'react-redux';
 
 export default function Comments() {
     //state
@@ -10,6 +11,7 @@ export default function Comments() {
 
     //const history
     const history = useHistory();
+    const dispatch = useDispatch();
 
     //handleNext
     const handleNext = (event) => {
