@@ -1,22 +1,45 @@
+//hooks
 import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+
+//mui arrow
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 export default function Feeling() {
-    const [feeling, setFeeling] = useState('');
+    //state
+    const [feeling, setFeeling] = useState(0);
+
+    //const
+    const history = useHistory();
+    const dispatch = useDispatch();
+
+    //handleNext
+    const handleNext = (event) => {
+        event.preventDefault();
+        history.push('/2');
+        dispatch({
+            type: 'ADD_FEELING',
+            payload: {
+                feeling: feeling,
+            },
+        });
+    };
 
     //handleFeeling
     const handleFeeling = (event) => {
-        setFeeling(event.target.value);
+        setFeeling(Number(event.target.value));
     };
 
     return (
         <div>
-            <div className="question">
+            <div className="feeling-form">
                 <form>
                     <h1>How are you feeling today?</h1>
-                    {/* <h2>{feeling}</h2> */}
-                    <label htmlFor="1">Confused</label>
+                    <h1>{feeling}</h1>
+                    <label htmlFor="confused">Confused</label>
                     <input
-                        id="1"
+                        id="confused"
                         type="radio"
                         value="1"
                         checked={feeling === '1'}
@@ -41,14 +64,17 @@ export default function Feeling() {
                         onChange={handleFeeling}
                     ></input>
                     <input
-                        id="5"
+                        id="confident"
                         type="radio"
                         value="5"
                         checked={feeling === '5'}
                         onChange={handleFeeling}
                     ></input>
-                    <label htmlFor="5">Confident</label>
+                    <label htmlFor="confident">Confident</label>
                 </form>
+                <button onClick={handleNext}>
+                    <ArrowForwardIosIcon className="nextButton" />
+                </button>
             </div>
         </div>
     );

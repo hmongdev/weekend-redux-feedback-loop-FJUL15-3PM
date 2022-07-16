@@ -1,0 +1,11 @@
+.blueBtn {
+    background-color: cornflowerblue;
+    color: white;
+    font-size: large;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
