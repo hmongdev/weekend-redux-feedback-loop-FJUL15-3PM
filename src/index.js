@@ -37,7 +37,7 @@ const support = (state = [], action) => {
 };
 const comment = (state = [], action) => {
     switch (action.type) {
-        case 'ADD_COMMENTS':
+        case 'ADD_COMMENT':
             return action.payload;
         default:
             return state;

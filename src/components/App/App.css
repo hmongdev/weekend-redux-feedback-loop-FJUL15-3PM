@@ -22,14 +22,12 @@
     font-size: large;
 }
 
-.nextButtonDiv {
-    float: right;
-    margin: 10rem;
-}
-
-.nextButton {
-    padding: 1rem;
+button {
+    margin: 1rem;
+    padding: 0.5rem 1rem;
     color: var(--background-color);
+    border-radius: 15%;
+    border: 4px outset lightgray;
 }
 
 textarea {
@@ -37,4 +35,18 @@ textarea {
     font-size: x-large;
     width: 50%;
     min-height: 5rem;
+}
+
+input,
+label {
+    margin: 0 1rem;
+}
+
+div.formResults {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: auto;
 }

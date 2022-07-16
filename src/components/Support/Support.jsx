@@ -14,14 +14,14 @@ export default function Feeling() {
     const history = useHistory();
     const dispatch = useDispatch();
 
-    //handleNext
+    //action
     const handleNext = (event) => {
         event.preventDefault();
         history.push('/4');
         dispatch({
             type: 'ADD_SUPPORT',
             payload: {
-                support: support,
+                support,
             },
         });
     };

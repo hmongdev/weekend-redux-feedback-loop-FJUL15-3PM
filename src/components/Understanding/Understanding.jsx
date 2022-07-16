@@ -14,15 +14,13 @@ export default function Feeling() {
     const history = useHistory();
     const dispatch = useDispatch();
 
-    //handleNext
+    //action
     const handleNext = (event) => {
         event.preventDefault();
         history.push('/3');
         dispatch({
             type: 'ADD_UNDERSTANDING',
-            payload: {
-                understanding: understanding,
-            },
+            payload: { understanding },
         });
     };
 

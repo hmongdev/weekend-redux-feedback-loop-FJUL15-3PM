@@ -14,16 +14,18 @@ export default function Feeling() {
     const history = useHistory();
     const dispatch = useDispatch();
 
-    //handleNext
+    //action
     const handleNext = (event) => {
         event.preventDefault();
-        history.push('/2');
-        dispatch({
-            type: 'ADD_FEELING',
-            payload: {
-                feeling: feeling,
-            },
-        });
+        if (!feeling) {
+            alert(`You must select a rating!`);
+        } else {
+            history.push('/2');
+            dispatch({
+                type: 'ADD_FEELING',
+                payload: { feeling },
+            });
+        }
     };
 
     //handleFeeling

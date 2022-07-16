@@ -13,22 +13,20 @@ export default function Comments() {
     const history = useHistory();
     const dispatch = useDispatch();
 
-    //handleNext
+    //action
     const handleNext = (event) => {
         event.preventDefault();
         history.push('/review');
         dispatch({
-            type: 'ADD_COMMENTS',
-            payload: { comment: comment },
+            type: 'ADD_COMMENT',
+            payload: { comment },
         });
     };
 
-    //handleComments
-    const handleComments = (event) => {
+    //handleComment
+    const handleComment = (event) => {
         setComments(event.target.value);
     };
-    //check rating
-    console.log(`Comments rating is:`, comment);
 
     return (
         <div>
@@ -39,7 +37,7 @@ export default function Comments() {
                     <textarea
                         id="comment"
                         type="text"
-                        onChange={handleComments}
+                        onChange={handleComment}
                     ></textarea>
                 </form>
                 <button onClick={handleNext}>
