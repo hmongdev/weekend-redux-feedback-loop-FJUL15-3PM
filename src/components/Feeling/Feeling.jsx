@@ -8,8 +8,6 @@ export default function Feeling() {
         setFeeling(event.target.value);
     };
 
-    //handleNext
-
     return (
         <div>
             <div className="question">
@@ -51,9 +49,6 @@ export default function Feeling() {
                     ></input>
                     <label htmlFor="5">Confident</label>
                 </form>
-            </div>
-            <div className="nextButton">
-                <button onClick={handleNext}>NEXT </button>
             </div>
         </div>
     );
