@@ -1,7 +1,6 @@
 //hooks
 import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-import '../Review/Review.css';
 import axios from 'axios';
 
 export default function Review() {
@@ -33,10 +32,7 @@ export default function Review() {
                 comments: comment,
             })
             .then((response) => {
-                // getForm();
-                // dispatch({
-                //     type: 'POST_FORM',
-                // });
+                console.log(`SUCCESS:`, response);
             })
             .catch((err) => {
                 console.log('Error in client POST:', err);

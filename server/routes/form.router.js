@@ -1,4 +1,4 @@
-//? 2. CREATE ROUTER FILE AND CREATE GET AND POST REQS
+//* 2. CREATE ROUTER FILE AND CREATE GET AND POST REQS
 const express = require('express');
 const router = express.Router();
 const pool = require('../modules/pool');
@@ -26,7 +26,6 @@ router.post('/', (req, res) => {
     console.log(`New form is:`, newForm);
 
     //pool.query
-    //) turnsstrings into integers
     pool.query(sqlQuery, [
         Number(newForm.feeling),
         Number(newForm.understanding),

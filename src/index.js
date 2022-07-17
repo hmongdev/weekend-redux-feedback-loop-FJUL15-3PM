@@ -1,16 +1,17 @@
+//! IMPORTS
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App/App';
 import registerServiceWorker from './registerServiceWorker';
 
-//! IMPORTS
+//! HOOKS
 import { applyMiddleware, createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 
-//! FEELING
-const feeling = (state = [], action) => {
+//! REDUCER - FEELING
+const feeling = (state = 0, action) => {
     switch (action.type) {
         case 'ADD_FEELING':
             return action.payload; //give me back the data req.body
@@ -18,8 +19,8 @@ const feeling = (state = [], action) => {
             return state;
     }
 };
-//! UNDERSTANDING
-const understanding = (state = [], action) => {
+//! REDUCER - UNDERSTANDING
+const understanding = (state = 0, action) => {
     switch (action.type) {
         case 'ADD_UNDERSTANDING':
             return action.payload;
@@ -27,8 +28,8 @@ const understanding = (state = [], action) => {
             return state;
     }
 };
-//! SUPPORT
-const support = (state = [], action) => {
+//! REDUCER - SUPPORT
+const support = (state = 0, action) => {
     switch (action.type) {
         case 'ADD_SUPPORT':
             return action.payload;
@@ -37,8 +38,8 @@ const support = (state = [], action) => {
     }
 };
 
-//! COMMENT
-const comment = (state = [], action) => {
+//! REDUCER - COMMENT
+const comment = (state = '', action) => {
     switch (action.type) {
         case 'ADD_COMMENT':
             return action.payload;

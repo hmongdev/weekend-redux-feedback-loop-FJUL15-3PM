@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-//import Router, Route
+//! HOOKS
 import { HashRouter as Router, Route } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
@@ -12,9 +12,9 @@ import Understanding from '../Understanding/Understanding';
 import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
 import Review from '../Review/Review';
+import Feedback from '../Feedback/Feedback';
 
-//! 3. CREATE GET
-//! GET
+//TODO: CREATE GET
 // const getForm = () => {
 //     axios
 //         .get('/feedback')
@@ -42,6 +42,7 @@ export default function App() {
                     exact
                     component={Review}
                 />
+                <Route path="/5" exact component={Feedback} />
             </Router>
         </div>
     );
