@@ -17,11 +17,15 @@ export default function Feeling() {
     //action
     const handleNext = (event) => {
         event.preventDefault();
-        history.push('/3');
-        dispatch({
-            type: 'ADD_UNDERSTANDING',
-            payload: { understanding },
-        });
+        if (!understanding) {
+            alert(`You must select a rating!`);
+        } else {
+            history.push('/3');
+            dispatch({
+                type: 'ADD_UNDERSTANDING',
+                payload: understanding,
+            });
+        }
     };
 
     //handleUnderstanding

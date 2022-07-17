@@ -4,21 +4,21 @@ import './index.css';
 import App from './components/App/App';
 import registerServiceWorker from './registerServiceWorker';
 
-//imports
+//! IMPORTS
 import { applyMiddleware, createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 
-//reducers
+//! FEELING
 const feeling = (state = [], action) => {
     switch (action.type) {
         case 'ADD_FEELING':
-            return action.payload;
+            return action.payload; //give me back the data req.body
         default:
             return state;
     }
 };
-
+//! UNDERSTANDING
 const understanding = (state = [], action) => {
     switch (action.type) {
         case 'ADD_UNDERSTANDING':
@@ -27,6 +27,7 @@ const understanding = (state = [], action) => {
             return state;
     }
 };
+//! SUPPORT
 const support = (state = [], action) => {
     switch (action.type) {
         case 'ADD_SUPPORT':
@@ -35,6 +36,8 @@ const support = (state = [], action) => {
             return state;
     }
 };
+
+//! COMMENT
 const comment = (state = [], action) => {
     switch (action.type) {
         case 'ADD_COMMENT':
@@ -44,6 +47,7 @@ const comment = (state = [], action) => {
     }
 };
 
+//! STORE
 const store = createStore(
     combineReducers({
         feeling,

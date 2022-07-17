@@ -19,7 +19,7 @@ export default function Comments() {
         history.push('/review');
         dispatch({
             type: 'ADD_COMMENT',
-            payload: { comment },
+            payload: comment,
         });
     };
 

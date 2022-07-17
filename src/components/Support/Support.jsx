@@ -17,13 +17,15 @@ export default function Feeling() {
     //action
     const handleNext = (event) => {
         event.preventDefault();
-        history.push('/4');
-        dispatch({
-            type: 'ADD_SUPPORT',
-            payload: {
-                support,
-            },
-        });
+        if (!support) {
+            alert(`You must select a rating!`);
+        } else {
+            history.push('/4');
+            dispatch({
+                type: 'ADD_SUPPORT',
+                payload: support,
+            });
+        }
     };
 
     //handleSupport

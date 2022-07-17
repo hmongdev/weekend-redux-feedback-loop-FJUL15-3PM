@@ -23,7 +23,7 @@ export default function Feeling() {
             history.push('/2');
             dispatch({
                 type: 'ADD_FEELING',
-                payload: { feeling },
+                payload: feeling,
             });
         }
     };
