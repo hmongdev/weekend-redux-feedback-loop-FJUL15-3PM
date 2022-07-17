@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('build'));
 
 /** ---------- EXPRESS ROUTES ---------- **/
-//? 1. CREATE EXPRESS ROUTE
+//* POST - 1. CREATE EXPRESS ROUTE
 const formRouter = require('./routes/form.router');
 app.use('/feedback', formRouter);
 

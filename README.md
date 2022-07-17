@@ -9,9 +9,7 @@
 
 ## Description
 
-_Duration: 2 Week Sprint_
-
-Directly above this is how long it took you to develop the project.
+_Duration: 8 hours_
 
 This is a reflection/feedback form modeled after Prime's system. Feedback will be collected over 4 views: Feeling, Understanding, Support, and Comments. In a final review page, your feedback will be shown and a submit button will allow you to submit your reflection for that day. When all steps are complete, your app will save the feedback in the database.
 
@@ -25,7 +23,8 @@ _1_ Creating a Next Button
 _2_ useHistory not working
 [1] The issue was that useHistory components cannot be placed inside the <Router> tag
 
-_3_
+_3_ POSTing to the database on `submit`
+[1] 
 
 ## Screen Shot
 

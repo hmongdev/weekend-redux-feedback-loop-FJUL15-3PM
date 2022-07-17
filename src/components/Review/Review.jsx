@@ -4,33 +4,28 @@ import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 
 export default function Review() {
-    //! CONST
-    const history = useHistory();
-    const dispatch = useDispatch();
-
     //! STORE
     const feeling = useSelector((store) => store.feeling);
     const understanding = useSelector((store) => store.understanding);
     const support = useSelector((store) => store.support);
     const comment = useSelector((store) => store.comment);
 
-    //? CONSOLE LOGS
-    console.log(`feeling`, feeling);
-    console.log(`understanding`, understanding);
-    console.log(`support`, support);
-    console.log(`comment`, comment);
+    //! CONST
+    const history = useHistory();
+    const newForm = {
+        feeling: feeling,
+        understanding: understanding,
+        support: support,
+        comments: comment,
+    };
 
-    //action
+    //! ACTION
     const handleSubmit = () => {
         //When the submit button is clicked, save the submission in the database.
-        //! 4. CREATE POST => 404 Error
+        //! 4. CREATE POST
         axios
-            .post('/feedback', {
-                feeling: feeling,
-                understanding: understanding,
-                support: support,
-                comments: comment,
-            })
+            //post to the database
+            .post('/feedback', newForm)
             .then((response) => {
                 console.log(`SUCCESS:`, response);
             })

@@ -77,6 +77,7 @@ export default function Feeling() {
                 <button onClick={handleNext}>
                     <ArrowForwardIosIcon className="nextButton" />
                 </button>
+                <h4>1 of 4</h4>
             </div>
         </div>
     );

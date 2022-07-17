@@ -43,6 +43,7 @@ export default function Comments() {
                 <button onClick={handleNext}>
                     <DoneAllIcon className="nextButton" />
                 </button>
+                <h4>4 of 4</h4>
             </div>
         </div>
     );
