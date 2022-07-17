@@ -44,32 +44,32 @@ export default function Feeling() {
                         id="confused"
                         type="radio"
                         value="1"
-                        checked={understanding === '1'}
+                        checked={understanding === 1}
                         onChange={handleUnderstanding}
                     ></input>
                     <input
                         type="radio"
                         value="2"
-                        checked={understanding === '2'}
+                        checked={understanding === 2}
                         onChange={handleUnderstanding}
                     ></input>
                     <input
                         type="radio"
                         value="3"
-                        checked={understanding === '3'}
+                        checked={understanding === 3}
                         onChange={handleUnderstanding}
                     ></input>
                     <input
                         type="radio"
                         value="4"
-                        checked={understanding === '4'}
+                        checked={understanding === 4}
                         onChange={handleUnderstanding}
                     ></input>
                     <input
                         id="confident"
                         type="radio"
                         value="5"
-                        checked={understanding === '5'}
+                        checked={understanding === 5}
                         onChange={handleUnderstanding}
                     ></input>
                     <label htmlFor="confident">Confident</label>
