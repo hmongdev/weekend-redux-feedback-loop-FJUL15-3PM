@@ -1,17 +1,21 @@
 //hooks
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import '../Review/Review.css';
 import axios from 'axios';
 
-export default function Review({ getForm }) {
-    //const / store
+export default function Review() {
+    //! CONST
     const history = useHistory();
+    const dispatch = useDispatch();
+
+    //! STORE
     const feeling = useSelector((store) => store.feeling);
     const understanding = useSelector((store) => store.understanding);
     const support = useSelector((store) => store.support);
     const comment = useSelector((store) => store.comment);
 
+    //? CONSOLE LOGS
     console.log(`feeling`, feeling);
     console.log(`understanding`, understanding);
     console.log(`support`, support);
@@ -29,10 +33,10 @@ export default function Review({ getForm }) {
                 comments: comment,
             })
             .then((response) => {
-                getForm();
-                dispatch({
-                    type: 'POST_FORM',
-                });
+                // getForm();
+                // dispatch({
+                //     type: 'POST_FORM',
+                // });
             })
             .catch((err) => {
                 console.log('Error in client POST:', err);

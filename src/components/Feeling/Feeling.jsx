@@ -43,33 +43,33 @@ export default function Feeling() {
                     <input
                         id="confused"
                         type="radio"
-                        value="1"
-                        checked={feeling === '1'}
+                        value="1" //front-end on DOM
+                        checked={feeling === 1} //back-end with redux
                         onChange={handleFeeling}
                     ></input>
                     <input
                         type="radio"
                         value="2"
-                        checked={feeling === '2'}
+                        checked={feeling === 2}
                         onChange={handleFeeling}
                     ></input>
                     <input
                         type="radio"
                         value="3"
-                        checked={feeling === '3'}
+                        checked={feeling === 3}
                         onChange={handleFeeling}
                     ></input>
                     <input
                         type="radio"
                         value="4"
-                        checked={feeling === '4'}
+                        checked={feeling === 4}
                         onChange={handleFeeling}
                     ></input>
                     <input
                         id="confident"
                         type="radio"
                         value="5"
-                        checked={feeling === '5'}
+                        checked={feeling === 5}
                         onChange={handleFeeling}
                     ></input>
                     <label htmlFor="confident">Confident</label>

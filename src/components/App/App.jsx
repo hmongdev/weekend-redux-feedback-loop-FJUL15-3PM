@@ -15,17 +15,17 @@ import Review from '../Review/Review';
 
 //! 3. CREATE GET
 //! GET
-const getForm = () => {
-    axios
-        .get('/feedback')
-        .then((response) => {
-            dispatch({
-                type: 'GET_FORM',
-                payload: response.data,
-            });
-        })
-        .catch((err) => alert('GET ERR in app.jsx', err));
-};
+// const getForm = () => {
+//     axios
+//         .get('/feedback')
+//         .then((response) => {
+//             dispatch({
+//                 type: 'GET_FORM',
+//                 payload: response.data,
+//             });
+//         })
+//         .catch((err) => alert('GET ERR in app.jsx', err));
+// };
 
 export default function App() {
     return (
@@ -38,7 +38,7 @@ export default function App() {
                 <Route path="/4" exact component={Comments} />
                 <Route
                     path="/review"
-                    getForm={getForm}
+                    // getForm={getForm}
                     exact
                     component={Review}
                 />
