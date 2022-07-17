@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 
-export default function Review() {
+export default function Review({ getFeedback }) {
     //! STORE
     const feeling = useSelector((store) => store.feeling);
     const understanding = useSelector((store) => store.understanding);
@@ -22,12 +22,13 @@ export default function Review() {
     //! ACTION
     const handleSubmit = () => {
         //When the submit button is clicked, save the submission in the database.
-        //! 4. CREATE POST
+        //* POST 3. CREATE POST
         axios
             //post to the database
             .post('/feedback', newForm)
             .then((response) => {
                 console.log(`SUCCESS:`, response);
+                getFeedback();
             })
             .catch((err) => {
                 console.log('Error in client POST:', err);

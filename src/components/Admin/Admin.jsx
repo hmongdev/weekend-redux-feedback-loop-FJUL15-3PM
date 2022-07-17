@@ -15,9 +15,6 @@ export default function Admin() {
         history.push('/');
     };
 
-    //! Not refreshing DOM and showing latest change
-    //? useEffect?
-
     return (
         <>
             <table>

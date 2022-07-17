@@ -1,9 +1,9 @@
-//* POST - 2. CREATE ROUTER FILE AND CREATE GET AND POST REQS
+//* POST 2. CREATE ROUTER FILE AND CREATE GET AND POST REQS
 const express = require('express');
 const router = express.Router();
 const pool = require('../modules/pool');
 
-//! GET
+//? GET
 router.get('/', (req, res) => {
     pool.query('SELECT * from "feedback";')
         .then((result) => {
@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
         });
 });
 
-//! POST
+//? POST
 router.post('/', (req, res) => {
     //const
     const newForm = req.body;

@@ -15,55 +15,61 @@ This is a reflection/feedback form modeled after Prime's system. Feedback will b
 
 What problem did you solve? How did you solve it?
 
-_1_ Creating a Next Button
+_1_ Creating a Next Button using material ui
 [1] `npm install @mui/material @emotion/react @emotion/style`
 [2] `import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';`
-[3] `<ArrowForwardIosIcon />`
+[3] added `<ArrowForwardIosIcon />` to return
 
 _2_ useHistory not working
 [1] The issue was that useHistory components cannot be placed inside the <Router> tag
 
 _3_ POSTing to the database on `submit`
-[1] 
+[1] _server.js_ - create express route
+[2] _form.router.js_ - create GET / POST req
+[3] _review.jsx_ - create axios.post('/feedback')
+[4] _admin.jsx_ - .map all your forms
 
-## Screen Shot
-
-Include one or two screen shots of your project here (optional). Remove if unused.
+_4_ List from db wasn't showing from `getFeedback`
+[1] app.jsx - <Route></Route> has to be the component inside when passing a function
 
 ### Prerequisites
 
 Link to software that is required to install the app (e.g. node).
 
 -   [Node.js](https://nodejs.org/en/)
--   List other prerequisites here
+-   [Express.js] `npm install express`
+-   [React]
+-   [Redux]
 
 ## Installation
 
-How do you get your application up and running? This is a step by step list for how another developer could get this project up and running. The good target audience in terms of knowledge, would be a fellow Primer from another cohort being able to spin up this project. Note that you do not need a paragraph here to intro Installation. It should be step-by-step.
+```
+npm install
+npm run server
+```
 
-If your application has secret keys (for example -- Twilio), make sure you tell them how to set that up, both in getting the key and then what to call it in the `.env` file.
+Now that the server is running, open a new terminal tab with `cmd + t` and start the react client app.
 
-1. Create a database named `your database name`,
-2. The queries in the `tables.sql` file are set up to create all the necessary tables and populate the needed data to allow the application to run correctly. The project is built on [Postgres](https://www.postgresql.org/download/), so you will need to make sure to have that installed. We recommend using Postico to run those queries as that was used to create the queries,
-3. Open up your editor of choice and run an `npm install`
-4. Run `npm run server` in your terminal
-5. Run `npm run client` in your terminal
-6. The `npm run client` command will open up a new browser tab for you!
+```
+npm run client
+```
 
 ## Usage
 
 How does someone use this application? Tell a user story here.
 
-1. xxx
-2. xxx
-3. xxx
-4. xxx
-5. xxx
-6. xxx
+1. User opens the app and selects radio buttons a rating which describes them
+2. After filling out the 4 questions, user can submit their form.
+3. Then a success screen will show, and allow the user to see all the past form submissions.
 
 ## Built With
 
 List technologies and frameworks here
+
+-   [Node.js](https://nodejs.org/en/)
+-   [Express.js] `npm install express`
+-   [React]
+-   [Redux]
 
 ## License
 
@@ -77,4 +83,4 @@ Thanks to [Prime Digital Academy](www.primeacademy.io) who equipped and helped m
 
 ## Support
 
-If you have suggestions or issues, please email me at [youremail@whatever.com](www.google.com)
+If you have suggestions or issues, please email me at [averyyang2674@gmail.com]
