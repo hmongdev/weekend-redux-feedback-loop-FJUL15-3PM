@@ -4,6 +4,7 @@ import './App.css';
 //! HOOKS
 import { HashRouter as Router, Route } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 
 //components
 import Header from './Header/Header';
@@ -15,7 +16,7 @@ import Review from '../Review/Review';
 import Feedback from '../Feedback/Feedback';
 
 //TODO: CREATE GET
-// const getForm = () => {
+// const getFeedback = () => {
 //     axios
 //         .get('/feedback')
 //         .then((response) => {
@@ -26,6 +27,10 @@ import Feedback from '../Feedback/Feedback';
 //         })
 //         .catch((err) => alert('GET ERR in app.jsx', err));
 // };
+
+// useEffect(() => {
+//     getFeedback();
+// }, []);
 
 export default function App() {
     return (
