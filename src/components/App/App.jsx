@@ -45,7 +45,7 @@ export default function App() {
                 <Route path="/2" exact component={Understanding} />
                 <Route path="/3" exact component={Support} />
                 <Route path="/4" exact component={Comments} />
-                //* passing functions requires its own component
+                {/* passing functions requires its own component  */}
                 <Route path="/review" exact>
                     <Review getFeedback={getFeedback} />
                 </Route>
